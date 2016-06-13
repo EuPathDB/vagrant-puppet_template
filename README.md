@@ -24,6 +24,23 @@ manifests are under the `src` directory and will be installed into the
 in the `modules` directory. The librarian run will be skipped if there
 is a `nolibrarian` file at the same level as `Vagrantfile`.
 
+Usage
+=======
+
+Clone the template project to a new name and remove the git tracking history.
+
+    NEWPROJECT=vagrant-newdev
+    git clone --depth 1 --branch master https://github.com/EuPathDB/vagrant-puppet_template.git vagrant-$NEWPROJECT
+    cd vagrant-$NEWPROJECT
+    rm -rf .git
+
+Add, edit `Vagrantfile` and puppet manifests as needed. Probably you
+will want to track changes in a SCM.
+
+    git init
+    git add .
+    git commit -m 'init`
+
 Manual Puppet Apply
 =======
 
