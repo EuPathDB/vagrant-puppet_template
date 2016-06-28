@@ -1,12 +1,13 @@
 BOX = 'ebrc/centos-7-64-puppet'
 BOX_URL = ''
 TLD = 'template.vm'
+HOSTNAME = 'puppet.' + TLD
 
 HOSTS = {
   :default => {
     :vagrant_box     => BOX,
     :vagrant_box_url => BOX_URL,
-    :hostname        => 'puppet.' + TLD,
+    :hostname        => HOSTNAME,
     :puppet_manifest => 'main.pp'
   },
 }
